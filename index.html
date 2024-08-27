@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador y Desencriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Encriptador de Texto</h1>
+            <button id="themeToggle" onclick="toggleTheme()">Modo Oscuro</button>
+            <a href="about.html" id="aboutLink">Acerca de</a>
+        </header>
+        
+        <div class="algorithm-selection">
+            <label for="algorithm">Seleccionar algoritmo:</label>
+            <select id="algorithm">
+                <option value="caesar">Cifrado César</option>
+                <option value="base64">Base64</option>
+            </select>
+        </div>
+
+        <textarea id="inputText" placeholder="Ingresa el texto aquí..."></textarea>
+        
+        <div class="buttons">
+            <button onclick="encrypt()">Encriptar</button>
+            <button onclick="decrypt()">Desencriptar</button>
+            <button onclick="clearFields()">Limpiar Campos</button>
+        </div>
+
+        <textarea id="outputText" readonly placeholder="El resultado aparecerá aquí..."></textarea>
+
+        <button class="copy-btn" onclick="copyText()">Copiar Resultado</button>
+
+        <div id="loadingIndicator" class="hidden">Procesando...</div>
+
+        <div id="history">
+            <h2>Historial de Conversiones</h2>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Texto Original</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody id="historyList"></tbody>
+            </table>
+        </div>
+
+        <div id="notification" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

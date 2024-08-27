@@ -1,0 +1,208 @@
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --background-color: #fff;
+    --border-color: #ddd;
+    --button-hover-color: #0056b3;
+}
+
+body.dark {
+    --primary-color: #17a2b8;
+    --secondary-color: #343a40;
+    --text-color: #f8f9fa;
+    --background-color: #212529;
+    --border-color: #495057;
+    --button-hover-color: #138496;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+#themeToggle {
+    background: none;
+    border: 2px solid var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#aboutLink {
+    text-decoration: none;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#aboutLink:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.algorithm-selection {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    resize: none;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.copy-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.copy-btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+#loadingIndicator {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.hidden {
+    display: none;
+}
+
+#notification {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#notification.success {
+    background-color: #28a745;
+    color: white;
+}
+
+#notification.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+#history {
+    margin-top: 30px;
+    text-align: left;
+}
+
+#history h2 {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+#historyTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#historyTable th, #historyTable td {
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+#historyTable tr:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
